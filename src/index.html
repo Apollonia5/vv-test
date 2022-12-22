@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin="anonymous"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles/main.scss">
+  <title>VV-layout</title>
+</head>
+<body>
+  <header class="header">
+    <img
+      src="./styles/images/Burger.svg"
+      alt="burger-image"
+      class="burger-image"
+    >
+    <nav class="nav">
+      <ul class="nav_list">
+        <li class="nav_item">Мероприятия</li>
+        <li class="nav_item">Товары</li>
+        <li class="nav_item">Клиенты</li>
+      </ul>
+    </nav>
+    <div class="header_acc">
+      <img
+        src="./styles/images/Icon.svg"
+        alt="user-image"
+        class="header__image"
+      >
+      <p class="header_email">admin@okguru.com</p>
+      <img
+        src="./styles/images/door.svg"
+        alt="door"
+        class="header__image"
+      >
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="main_title">Создание мероприятия</h1>
+    <form class="main_form">
+      <div class="main_container">
+        <div class="main_first-column">
+          <div class="main_event-block">
+            <label for="eventname">Название мероприятия</label>
+            <input
+              type="text"
+              id="eventname"
+              name="eventname"
+              class="main_event-input"
+              placeholder="Введите название"
+            >
+          </div>
+        
+          <div class="main_event-block">
+            <label for="name">Имя ведущего</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="main_event-input"
+              placeholder="Введите имя"
+            >
+          </div>
+
+          <div class="main_event-block">
+            <label for="start">Дата и время начала</label>
+            <div class="main_date-block">
+              <input
+                type="date"
+                id="start"
+                name="eventstart"
+                class="main_event-input"
+                min="2022-01-01"
+                max="2023-12-31"
+              >
+              <input
+                type="time"
+                id="start_time"
+                name="start_time"
+                min="09:00"
+                class="main_event-input"
+                max="23:00"
+              >
+            </div>
+          </div>
+    
+          <div class="main_event-block">
+            <label for="url1">Ссылка на YouTube трансляцию</label>
+            <input
+              type="url"
+              name="url1"
+              id="url1"
+              class="main_event-input"
+              placeholder="Вставьте ссылку"
+              pattern="https://.*"
+            >
+          </div>
+        
+          <div class="main_event-block">
+            <label for="url2">Ссылка на заглушку</label>
+            <input
+              type="url"
+              name="url2"
+              id="url2"
+              class="main_event-input"
+              placeholder="Вставьте ссылку"
+              pattern="https://.*"
+            >
+          </div>
+
+          <div class="main_event-block">
+            <label for="url3">Внешняя кнопка (ссылка)</label>
+            <input
+              type="url"
+              name="url3"
+              id="url3"
+              class="main_event-input"
+              placeholder="Вставьте ссылку"
+              pattern="https://.*"
+            >
+          </div>
+      </div>
+
+      <div class="main_second-column">
+        <div class="main_checkbox-block">
+          <p>Доступ к мероприятию:</p>
+          <div class="main_checkboxes">
+            <input
+              type="radio"
+              id="typeChoice1"
+              name="type"
+              class="main_first-checkbox"
+              value="password">
+            <label for="typeChoice1">По паролям</label><br>
+        
+            <input
+              type="radio"
+              id="typeChoice2"
+              name="type"
+              value="open">
+            <label for="typeChoice2">Открытый</label>
+          </div>
+        </div>
+
+        <div class="main_interative-checkbox-block">
+          <div class="main_interactive">
+            <p>Чат при запуске мероприятия</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <hr />
+  
+          <div class="main_interactive">
+            <p>Кликабельные ссылки от пользователей в чате</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <hr />
+  
+          <div class="main_interactive">
+            <p>Корзина</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <hr />
+        </div>
+
+        <div class="main_custom-upload">
+          <p>Презентация:</p>
+          <label for="file-upload" class="custom-file-upload">
+            Загрузить PDF
+            <img
+              src="./styles/images/DownloadSimple.svg"
+              alt="download"
+              class="main_image"
+            >
+          </label>
+          <input id="file-upload" type="file" class="hidden-input"/>
+        </div>
+  
+        <div class="main_ok-checkboxes">
+          <p>Дополнительные обязательные поля при входе:</p>
+            <div class="roundCheck">
+              <input
+                type="checkbox"
+                id="lastName"
+                name="scales"
+                class="round-checkbox"
+              >
+              <label for="lastName" class="checkbox_label"></label>
+              <p>Фамилия</p>
+            </div>
+
+            <div class="roundCheck">
+              <input
+                type="checkbox"
+                id="town"
+                name="town"
+                class="round-checkbox"
+              >
+              <label for="town" class="checkbox_label"></label>
+              <p>Город</p>
+            </div>
+
+            <div class="roundCheck">
+              <input
+                type="checkbox"
+                id="email"
+                name="email"
+                class="round-checkbox"
+              >
+              <label for="email" class="checkbox_label"></label>
+              <p>Email</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+      <input type="submit" value="Сохранить" id="submit-button" class="main_submit">
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>Trade Broadcast 2022 ©</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "vv-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apollonia5/vv-test.git"
+  },
+  "author": "Polina Slipchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Apollonia5/vv-test/issues"
+  },
+  "homepage": "https://github.com/Apollonia5/vv-test",
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "sass": "^1.57.1"
+  }
+}
